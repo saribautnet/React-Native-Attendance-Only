@@ -1,11 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from "react";
+import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -14,12 +7,12 @@ import {
   Text,
   useColorScheme,
   View,
-} from "react-native";
+} from 'react-native';
 
-import { Colors, Header } from "react-native/Libraries/NewAppScreen";
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === "dark";
+  const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -28,13 +21,12 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
-        barStyle={isDarkMode ? "light-content" : "dark-content"}
+        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-      >
+        style={backgroundStyle}>
         <Header />
         <View
           style={[
@@ -42,8 +34,7 @@ function App(): React.JSX.Element {
               backgroundColor: isDarkMode ? Colors.black : Colors.white,
             },
             styles.body,
-          ]}
-        ></View>
+          ]}></View>
         <Text style={styles.sectionTitle}>Test breeee.</Text>
       </ScrollView>
     </SafeAreaView>
@@ -57,19 +48,19 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: "600",
+    fontWeight: '600',
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
-    fontWeight: "400",
+    fontWeight: '400',
   },
   highlight: {
-    fontWeight: "700",
+    fontWeight: '700',
   },
   body: {
-    alignItems: "center",
-    backgroundColor: "pink",
+    alignItems: 'center',
+    backgroundColor: 'pink',
   },
 });
 
