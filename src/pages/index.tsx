@@ -1,11 +1,17 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {Button, StyleSheet, Text, View} from 'react-native';
 
 export default function PageComponent() {
-  <>
-    <View style={styles.container}>
-      <Text style={{fontSize: 14}}>haloooo test</Text>
-    </View>
-  </>;
+  const navigation = useNavigation();
+
+  return (
+    <>
+      <View style={styles.container}>
+        <Text style={{fontSize: 14, color: 'black'}}>haloooo test</Text>
+        <Button title="test" onPress={() => navigation.navigate('Home')} />
+      </View>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
